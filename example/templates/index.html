@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>RANDOM NUMBER GENERATOR</title>
+        <style>
+        body {
+            background-image: url('/static/home6.jpg');
+            color:black;
+            font-size: 20px;
+            text-align: center;
+            width: 300px;
+            border: 10px solid cadetblue;
+            border-style:ridge;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 125px;
+            margin-bottom: 125;
+            padding-top: 55px;
+            padding-bottom: 55px;
+            padding-left: 155px;
+            padding-right: 155px;
+            
+        }
+
+        .button {
+            background-color:cadetblue;
+            border: none;
+            color: rgb(1, 33, 37);
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 10px;
+            margin: 44px 2px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+            border-radius: 10px;
+            font-size: 240%;
+        }
+
+        .button1:hover {
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+
+        .desc {
+            margin-block: 25px;
+            padding-block: 5px;
+        }
+        </style>
+    </head>
+    
+    <body>
+        <span>welcome to</span>
+        <h1>RANDOM NUMBER GENERATOR</h1>
+        <hr>
+        <div class="desc">Service for generating a random number from a given interval.</div>
+        <h3 style="text-align: center;">Please, add borders:</h3>
+        <input type="integer" placeholder="from" class="form-control" id="random_from" required="">
+        <input type="integer" placeholder="to" class="form-control" id="random_to" required="">
+        <button class="button button1" id="generation" onclick="setTimeout(getRandom, 1000)" >Generate</button>
+        <script>
+            function getRandom() {
+                document.getElementById("generation").innerHTML = "{{num}}";
+                document.getElementById("random_from").value="";
+                document.getElementById("random_to").value="";
+            }
+        </script>
+    </body>
+</html>
